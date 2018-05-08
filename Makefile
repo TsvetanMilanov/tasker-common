@@ -11,8 +11,10 @@ endef
 
 $(BUILD_DIR)/vendor: $(CURDIR)/Gopkg.toml $(CURDIR)/Gopkg.lock
 	dep ensure
+	@touch $@
 
 $(BUILD_DIR)/build: $(call find_recursive,$(CURDIR),"*.go") $(BUILD_DIR)/vendor
 	go build $(GO_NAMESPACE)/common
+	@touch $@
 
 build: $(BUILD_DIR)/build
