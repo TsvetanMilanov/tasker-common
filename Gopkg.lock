@@ -5,7 +5,7 @@
   branch = "master"
   name = "github.com/TsvetanMilanov/go-lambda-workflow"
   packages = ["workflow"]
-  revision = "62b75784be4e17eb8815365503dff1fa0a05f66d"
+  revision = "904888f1a13d53f30b7d7ed4cc3a5e1706fc4ad6"
 
 [[projects]]
   name = "github.com/TsvetanMilanov/go-simple-di"
@@ -16,12 +16,33 @@
 [[projects]]
   name = "github.com/aws/aws-lambda-go"
   packages = ["events"]
-  revision = "fafa7e49388b8991caf99308e80655ba91816b72"
-  version = "v1.1.0"
+  revision = "4d30d0ff60440c2d0480a15747c96ee71c3c53d4"
+  version = "v1.2.0"
+
+[[projects]]
+  name = "github.com/go-playground/locales"
+  packages = [
+    ".",
+    "currency"
+  ]
+  revision = "f63010822830b6fe52288ee52d5a1151088ce039"
+  version = "v0.12.1"
+
+[[projects]]
+  name = "github.com/go-playground/universal-translator"
+  packages = ["."]
+  revision = "b32fa301c9fe55953584134cb6853a13c87ec0a1"
+  version = "v0.16.0"
+
+[[projects]]
+  name = "github.com/go-playground/validator"
+  packages = ["."]
+  revision = "ffe836d7363bc7ab3f56d2fc90ce09bfb5a0c2c5"
+  version = "v9.17.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a46b50a0fd164cd7ce612d0644fedb8df719a493d64b429d3d628526ebfc1e5d"
+  inputs-digest = "6a35f004ee539f2434c6d2f1398346dd7cdfba1b9c43928eade3ceb6d14ef49c"
   solver-name = "gps-cdcl"
   solver-version = 1

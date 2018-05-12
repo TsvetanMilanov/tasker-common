@@ -15,3 +15,6 @@ vendor
 
 # Build dir
 .build
+
+# Vim files
+*.swp
