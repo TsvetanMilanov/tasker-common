@@ -12,7 +12,6 @@ import (
 func ValidateRequest(ctx workflow.Context) error {
 	req := ctx.GetRequest()
 	vErrs := validateRequest(req)
-
 	if len(vErrs) > 0 {
 		resBody := []string{}
 		for _, e := range vErrs {
@@ -28,5 +27,9 @@ func ValidateRequest(ctx workflow.Context) error {
 func validateRequest(req interface{}) validator.ValidationErrors {
 	validate := validator.New()
 	errs := validate.Struct(req)
-	return errs.(validator.ValidationErrors)
+	if errs != nil {
+		return errs.(validator.ValidationErrors)
+	}
+
+	return nil
 }
