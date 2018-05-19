@@ -10,7 +10,7 @@ import (
 // SetInternalServerError sets the response to be struct with message
 // "Internal server error" and the status code to 500. Also it prints the
 // original error.
-func SetInternalServerError(ctx workflow.Context, err error) {
+func SetInternalServerError(ctx workflow.Context, err error) error {
 	fmt.Println(err)
 	e := struct {
 		Message string `json:"message"`
@@ -19,4 +19,5 @@ func SetInternalServerError(ctx workflow.Context, err error) {
 	ctx.
 		SetResponse(e).
 		SetResponseStatusCode(http.StatusInternalServerError)
+	return nil
 }
